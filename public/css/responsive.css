@@ -1,0 +1,166 @@
+/* Base: Mobile-first (0 - 479px) */
+@media (max-width: 479px) {
+    .hero {
+        text-align: left;
+        padding: 0rem 1rem;
+        padding-bottom: 0;
+    }
+
+    .auth-buttons {
+        display: none;
+    }
+
+    .step {
+        margin-bottom: 7%;
+        margin-left: 6%;
+    }
+
+    .icon-list-hero ul {
+        flex-direction: column;
+        margin-left: 5%;
+    }
+
+    .faqsection h2 {
+        font-size: 2rem;
+    }
+
+    .user-review p {
+        width: 80%;
+    }
+
+    .subscribe-box input {
+        width: 100%;
+        margin-bottom: 4%;
+    }
+
+    .navbar-nav .btn {
+        margin: 0.2rem 0.5rem;
+    }
+
+    .subscribe-box h2 {
+        font-size: 2rem;
+    }
+
+    .subscribe-box {
+        padding: 2rem 1rem;
+    }
+
+    .mobile-margin {
+        margin: 1rem;
+    }
+}
+
+/* Tablet: 480px - 767px */
+@media (min-width: 480px) and (max-width: 767px) {
+    .hero h1 {
+        font-size: 2.5rem;
+        color: #facc15;
+    }
+
+    .hero {
+        text-align: left;
+        padding: 0rem 1rem;
+        padding-bottom: 0;
+    }
+
+    .step {
+        margin-bottom: 7%;
+        margin-left: 6%;
+    }
+
+    .icon-list-hero ul {
+        flex-direction: column;
+        margin-left: 5%;
+    }
+
+    .faqsection h2 {
+        font-size: 2rem;
+    }
+
+    .user-review p {
+        width: 80%;
+    }
+
+    .subscribe-box input {
+        width: 100%;
+        margin-bottom: 4%;
+    }
+
+    .navbar-nav .btn {
+        margin: 0.2rem 0.5rem;
+    }
+
+    .subscribe-box h2 {
+        font-size: 2rem;
+    }
+
+    .subscribe-box {
+        padding: 2rem 1rem;
+    }
+
+    .mobile-margin {
+        margin: 1rem;
+    }
+}
+
+/* Laptop: 768px - 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero h1 {
+        font-size: 2.5rem;
+        color: #facc15;
+    }
+
+    .hero {
+        text-align: left;
+        padding: 0rem 1rem;
+        padding-bottom: 0;
+    }
+
+    .step {
+        margin-bottom: 7%;
+        margin-left: 6%;
+    }
+
+    .icon-list-hero ul {
+        flex-direction: column;
+        margin-left: 5%;
+    }
+
+    .faqsection h2 {
+        font-size: 2rem;
+    }
+
+    .user-review p {
+        width: 80%;
+    }
+
+    .subscribe-box input {
+        width: 100%;
+        margin-bottom: 4%;
+    }
+
+    .navbar-nav .btn {
+        margin: 0.2rem 0.5rem;
+    }
+
+    .subscribe-box h2 {
+        font-size: 2rem;
+    }
+
+    .subscribe-box {
+        padding: 2rem 1rem;
+    }
+
+    .mobile-margin {
+        margin: 1rem;
+    }
+}
+
+/* MacBook / HD: 1024px - 1439px */
+@media (min-width: 1024px) and (max-width: 1439px) {}
+
+/* LCD / 2K: 1440px - 2559px */
+@media (min-width: 1440px) and (max-width: 2559px) {}
+
+/* 4K Display: 2560px and above */
+@media (min-width: 2560px) {}
