@@ -200,7 +200,7 @@
                             <blockquote class="blockquote text-center">
                                 <p class="mb-4 review-text">Flowbite is just awesome...5</p>
                                 <div class="d-flex align-items-center justify-content-center review-info">
-                                    <div class="d-flex flex-column flex-md-row gap-3 align-items-center">
+                                    <div class="d-flex flex-column flex-md-row gap-3 gap-md-1 align-items-center">
                                         <img src="{{ asset('img/user-profile.png') }}" alt="user picture"
                                             class="me-2" />
                                         <h6>Bonnie Green</h6>
@@ -214,7 +214,7 @@
                                 <p class="mb-4 review-text">Excellent platform to gain exposure and real engagement.
                                 </p>
                                 <div class="d-flex align-items-center justify-content-center review-info">
-                                    <div class="d-flex flex-column flex-md-row gap-3 align-items-center">
+                                    <div class="d-flex flex-column flex-md-row gap-3 gap-md-1 align-items-center">
                                         <img src="{{ asset('img/user-profile.png') }}" alt="user picture"
                                             class="me-2" />
                                         <h6>Alex Brown</h6>
@@ -227,7 +227,7 @@
                             <blockquote class="blockquote text-center">
                                 <p class="mb-4 review-text">Simple and effective. Highly recommended!</p>
                                 <div class="d-flex align-items-center justify-content-center review-info">
-                                    <div class="d-flex flex-column flex-md-row gap-3 align-items-center">
+                                    <div class="d-flex flex-column flex-md-row gap-3 gap-md-1 align-items-center">
                                         <img src="{{ asset('img/user-profile.png') }}" alt="user picture"
                                             class="me-2" />
                                         <h6>Taylor Smith</h6>
