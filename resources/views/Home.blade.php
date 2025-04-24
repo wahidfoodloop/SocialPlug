@@ -12,44 +12,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-darkblue px-4">
-        <div class="container-fluid">
-            <a class="navbar-brand text-white fw-bold" href="#">
-                <img src="{{ asset('img/logo.png') }}" alt="Logo" class="logo-img img-fluid">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Contact</a>
-                    </li>
-                    <button class="btn btn-secondary btn-sm ms-2">Log In</button>
-                    <button class="btn btn-yellow btn-sm ms-2">Sign Up</button>
+    <header class="container">
+        <nav class="navbar navbar-expand-lg bg-darkblue w-100">
+            <div class="d-flex align-items-center justify-content-between w-100">
+                <div class="d-flex align-items-center justify-content-between justify-content-lg-start w-100">
+                    <a class="navbar-brand text-white fw-bold" href="#">
+                        <img src="{{ asset('img/logo.png') }}" alt="Logo" class="logo-img img-fluid">
+                    </a>
+                    <ul class="navbar-nav d-none d-lg-flex">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <button class="btn btn-secondary btn-md ms-2 text-nowrap">Log In</button>
+                    <button class="btn btn-yellow btn-md ms-3 text-nowrap">Sign Up</button>
+                </div>
             </div>
-        </div>
-    </nav>
-    <div class="container my-5">
-        <div class="row align-items-center">
+        </nav>
+    </header>
+    <div class="container my-5 px-3 px-md-5">
+        <div class="row">
             <div class="col-md-6">
                 <section class="hero">
                     <h1>Free Youtube Subscribers</h1>
@@ -59,69 +66,67 @@
                 <div class="row icon-list-hero">
                     <div class="col-md-12">
                         <ul>
-                            <li><i class="fa-solid fa-clock"></i> Limited Time Offer</li>
+                            <li><i class="fa-regular fa-clock"></i> Limited Time Offer</li>
                             <li><i class="fa-solid fa-shield"></i> 100% safe</li>
-                            <li><i class="fa-solid fa-bolt"></i>Fast Delivery</li>
+                            <li><i class="fa-solid fa-bolt-lightning"></i>Fast Delivery</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 d-flex justify-content-end">
                 <section class="form-section">
-                    <input type="email" placeholder="Enter your Email here..">
-                    <input type="url" placeholder="Enter your link here..">
-                    <input type="number" placeholder="Subscribers Goal">
+                    <label for="">Enter your Email here.</label>
+                    <input type="email" placeholder="john@socialplug.com">
+                    <label for="">Enter your link here.</label>
+                    <input type="url" placeholder="https://www.youtube.com/channel/abcedf">
+                    <label for="">Subscribers Goal</label>
+                    <input type="number" placeholder="50">
                     <button class="button-golden">Get Free Subscribers</button>
                 </section>
             </div>
         </div>
     </div>
 
-    <div class="container my-2">
+    <div class="container my-2 py-3 py-lg-5 px-3 px-md-5">
         <div class="row">
-            <div class="col-md-12 text-center">
-                <h2>Want to get more free Subscribers?</h2>
-                <p>Follow the three simple steps to get started with <span style="color: #facc15;">
-                        SocialPlug
-                    </span></p>
+            <div class="col-md-12 text-center subscribers-sec">
+                <h2 class="second-heading">Want to get more free Subscribers?</h2>
+                <p>Follow the three simple steps to get started with
+                    <span>
+                        SocialPlug</span>!
+                </p>
+            </div>
+        </div>
+        <div class="row free_sub">
+            <div class="col-12 col-md-4">
+                <div class="step">
+                    <i class="fa-regular fa-address-card"></i>
+                    <h3>Sign Up</h3>
+                    <p>Create a <span style="color: #facc15;">
+                            SocialPlug
+                        </span>
+                        account</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="step">
+                    <i class="fa-solid fa-piggy-bank"></i>
+                    <h3>Earn Credits</h3>
+                    <p>Complete tasks and get <span style="color: #facc15;">credits</span></p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="step">
+                    <i class="fa-regular fa-credit-card"></i>
+                    <h3>Get Subscribers</h3>
+                    <p>Use credits to get <span style="color: #facc15;">subscribers</span></p>
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="container my-2">
-        <section class="steps">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="step">
-                        <i class="fa-solid fa-address-card"></i>
-                        <h3>Sign Up</h3>
-                        <p>Create a <span style="color: #facc15;">
-                                SocialPlug
-                            </span>
-                            account</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="step">
-                        <i class="fa-solid fa-piggy-bank"></i>
-                        <h3>Earn Credits</h3>
-                        <p>Complete tasks and get <span style="color: #facc15;">credits</span></p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="step">
-                        <i class="fa-solid fa-credit-card"></i>
-                        <h3>Get Subscribers</h3>
-                        <p>Use credits to get <span style="color: #facc15;">subscribers</span></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
     {{-- faqs --}}
-    <section class="container my-5 faqsection">
-        <h2 class="text-center text-white mb-4">Frequently Asked Questions</h2>
+    <section class="container my-5 faqsection px-3 px-md-5">
+        <h2 class="text-center text-white mb-4 second-heading">Frequently Asked Questions</h2>
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="accordion" id="faqAccordion">
@@ -138,7 +143,8 @@
                                 CSS
                                 including buttons, dropdowns, modals, navbars, and more. Check out this guide to learn
                                 how
-                                to <a href="#" class="text-primary">get started</a> and start developing websites even
+                                to <a href="#" class="text-primary">get started</a> and start developing
+                                websites even
                                 faster with components on top of Tailwind CSS.
                             </div>
                         </div>
@@ -176,42 +182,58 @@
     </section>
 
     {{-- User Review --}}
-    <div class="container my-2 user-review">
+    <div class="container py-4 py-lg-5 user-review px-1 px-md-5">
         <div class="row align-items-center">
             <div class="col-md-12 text-center">
-                <h2>User's Reviews</h2>
-                <p>Discover What our Users have to say about <span style="color: #facc15;">
+                <h2 class="second-heading">User's Reviews</h2>
+                <p>Discover What our Users have to say about <span>
                         SocialPlug 10,000+
                     </span> Positive reviews </p>
             </div>
         </div>
-    </div>
-    {{-- Customer Review Carcousel --}}
-    <div class="container">
+        {{-- Customer Review Carcousel --}}
         <div class="row">
             <div class="col-md-12">
                 <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner bg-darkblue p-5 rounded">
                         <div class="carousel-item active">
                             <blockquote class="blockquote text-center">
-                                <p class="mb-4">"Flowbite is just awesome...5"</p>
-                                <footer class="blockquote-footer text-white">Bonnie Green, | <cite title="Company">CTO
-                                        at
-                                        Flowbite</cite></footer>
+                                <p class="mb-4 review-text">Flowbite is just awesome...5</p>
+                                <div class="d-flex align-items-center justify-content-center review-info">
+                                    <div class="d-flex flex-column flex-md-row gap-3 align-items-center">
+                                        <img src="{{ asset('img/user-profile.png') }}" alt="user picture"
+                                            class="me-2" />
+                                        <h6>Bonnie Green</h6>
+                                        <p class="ms-1">| <span>CTO at Flowbite</span></p>
+                                    </div>
+                                </div>
                             </blockquote>
                         </div>
                         <div class="carousel-item">
                             <blockquote class="blockquote text-center">
-                                <p class="mb-4">"Excellent platform to gain exposure and real engagement."</p>
-                                <footer class="blockquote-footer text-white">Alex Brown, | <cite title="Company">Content
-                                        Creator</cite></footer>
+                                <p class="mb-4 review-text">Excellent platform to gain exposure and real engagement.
+                                </p>
+                                <div class="d-flex align-items-center justify-content-center review-info">
+                                    <div class="d-flex flex-column flex-md-row gap-3 align-items-center">
+                                        <img src="{{ asset('img/user-profile.png') }}" alt="user picture"
+                                            class="me-2" />
+                                        <h6>Alex Brown</h6>
+                                        <p class="ms-1">| <span>Content Creator</span></p>
+                                    </div>
+                                </div>
                             </blockquote>
                         </div>
                         <div class="carousel-item">
                             <blockquote class="blockquote text-center">
-                                <p class="mb-4">"Simple and effective. Highly recommended!"</p>
-                                <footer class="blockquote-footer text-white">Taylor Smith, | <cite
-                                        title="Company">Marketing Specialist</cite></footer>
+                                <p class="mb-4 review-text">Simple and effective. Highly recommended!</p>
+                                <div class="d-flex align-items-center justify-content-center review-info">
+                                    <div class="d-flex flex-column flex-md-row gap-3 align-items-center">
+                                        <img src="{{ asset('img/user-profile.png') }}" alt="user picture"
+                                            class="me-2" />
+                                        <h6>Taylor Smith</h6>
+                                        <p class="ms-1">| <span>Marketing Specialist</span></p>
+                                    </div>
+                                </div>
                             </blockquote>
                         </div>
                     </div>
@@ -227,36 +249,38 @@
                     </button>
                 </div>
             </div>
-
         </div>
     </div>
 
-    <div class="container subscribe-box">
-        <div class="row">
-            <div class="col-md-7">
-                <h2>Join 2,000 Subscriber</h2>
-                <p>Stay in the loop with everything you need to know</p>
-            </div>
-            <div class="col-md-5">
-                <div>
-                    <input type="email" placeholder="Enter your email">
-                    <button>Subscribe</button>
+    <div class="container px-1 px-md-5 px-3">
+        <div class="subscribe-box">
+            <div class="row">
+                <div class="col-md-7">
+                    <h2>Join 2,000+ subscribers</h2>
+                    <p>Stay in the loop with everything you need to know</p>
                 </div>
-                <p>we care about your data in our privacy policy</p>
+                <div class="col-md-5">
+                    <div>
+                        <input type="email" placeholder="Enter your email" class="me-2">
+                        <button>Subscribe</button>
+                    </div>
+                    <p>we care about your data in our privacy policy</p>
+                </div>
             </div>
         </div>
     </div>
 
     {{-- footer --}}
 
-    <footer class="bg-darkblue text-light py-4 footer">
-        <div class="container">
+    <footer class="bg-darkblue text-light py-4 py-lg-5 footer">
+        <div class="container py-lg-5 my-lg-4">
             <div class="row">
                 <div class="mobile-margin col-md-3">
-                    <div><strong class="logo">
-                            <img src="{{ asset('img/logo.png') }}" alt="Logo" class="logo-img img-fluid">
-                        </strong></div>
-                    <p>Grow your YouTube channel easily and effectively with our subscriber exchange network.</p>
+                    <div>
+                        <img src="{{ asset('img/logo.png') }}" alt="Logo" class="logo-img img-fluid">
+                    </div>
+                    <p class="footer-text">Grow your YouTube channel easily and effectively with our subscriber
+                        exchange network.</p>
                     <div class="social-icons">
                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -294,10 +318,10 @@
                     <h6>Contact Us</h6>
                     <ul>
                         <li>
-                            <p>Email: support@socialplug.com</p>
+                            <p><i class="fa-regular fa-envelope"></i> support@socialplug.com</p>
                         </li>
                         <li>
-                            <p>Address: 213 Lane, London, UK</p>
+                            <p><i class="fa-solid fa-location-dot"></i> 213 Lane, London, UK</p>
                         </li>
                     </ul>
                 </div>
@@ -309,19 +333,19 @@
     </footer>
     <div class="container">
         <div class="row ">
-            <div class="col-md-6 text-center text-white">
+            <div class="col-12 col-md-6 text-center text-md-start" style="color: var(--text-color)">
                 &copy; 2025 SocialPlug. All rights reserved.
             </div>
-            <div class="col-md-6 text-center footer-links">
-                All Rights Reserved |
-                <a href="#" class="text-decoration-underline">Terms & Conditions</a> |
-                <a href="#" class="text-decoration-underline">Privacy Policy</a>
+            <div class="col-12 col-md-6 text-center text-md-end footer-links">
+                All Rights Reserved
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-        crossorigin="anonymous"></script>
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
         integrity="sha512-4+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"
         referrerpolicy="no-referrer"></script>
