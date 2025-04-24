@@ -20,37 +20,36 @@
 <body>
     <header class="container">
         <nav class="navbar navbar-expand-lg bg-darkblue w-100">
-            <div class="d-flex align-items-center justify-content-between w-100">
-                <div class="d-flex align-items-center justify-content-between justify-content-lg-start w-100">
-                    <a class="navbar-brand text-white fw-bold" href="#">
-                        <img src="{{ asset('img/logo.png') }}" alt="Logo" class="logo-img img-fluid">
-                    </a>
-                    <ul class="navbar-nav d-none d-lg-flex">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white fw-bold" href="#">
+                    <img src="{{ asset('img/logo.png') }}" alt="Logo" class="logo-img img-fluid">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars text-white"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Home</a>
+                            <a class="nav-link text-white text-center" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">About</a>
+                            <a class="nav-link text-white text-center" href="#">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Services</a>
+                            <a class="nav-link text-white text-center" href="#">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Pricing</a>
+                            <a class="nav-link text-white text-center" href="#">Pricing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Contact</a>
+                            <a class="nav-link text-white text-center" href="#">Contact</a>
                         </li>
                     </ul>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                </div>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <button class="btn btn-secondary btn-md ms-2 text-nowrap">Log In</button>
-                    <button class="btn btn-yellow btn-md ms-3 text-nowrap">Sign Up</button>
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-secondary btn-md me-2 text-nowrap">Log In</button>
+                        <button class="btn btn-yellow btn-md text-nowrap">Sign Up</button>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -98,7 +97,7 @@
             </div>
         </div>
         <div class="row free_sub">
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <div class="step">
                     <i class="fa-regular fa-address-card"></i>
                     <h3>Sign Up</h3>
@@ -108,14 +107,14 @@
                         account</p>
                 </div>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <div class="step">
                     <i class="fa-solid fa-piggy-bank"></i>
                     <h3>Earn Credits</h3>
                     <p>Complete tasks and get <span style="color: #facc15;">credits</span></p>
                 </div>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-6 col-lg-4 mt-md-4 mt-lg-0">
                 <div class="step">
                     <i class="fa-regular fa-credit-card"></i>
                     <h3>Get Subscribers</h3>
@@ -255,11 +254,11 @@
     <div class="container px-1 px-md-5 px-3">
         <div class="subscribe-box">
             <div class="row">
-                <div class="col-md-7">
+                <div class="col-lg-7">
                     <h2>Join 2,000+ subscribers</h2>
                     <p>Stay in the loop with everything you need to know</p>
                 </div>
-                <div class="col-md-5">
+                <div class="col-lg-5">
                     <div>
                         <input type="email" placeholder="Enter your email" class="me-2">
                         <button>Subscribe</button>
