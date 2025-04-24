@@ -2,7 +2,7 @@
 @media (max-width: 479px) {
     .hero {
         text-align: left;
-        padding: 0rem 1rem;
+        padding: 0;
         padding-bottom: 0;
     }
 
@@ -10,42 +10,155 @@
         display: none;
     }
 
-    .icon-list-hero ul {
+    .features-list {
         flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
     }
 
-    .faqsection h2 {
-        font-size: 2rem;
+    .section-container {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
     }
 
-    .user-review p {
-        width: 80%;
+    .hero-container {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
     }
-
-    .subscribe-box input {
+    
+    .nav-link {
+        text-align: center;
+        margin: 0.25rem 0;
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    .hero-content-wrapper {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .video-box {
+        margin-top: 1rem;
+    }
+    
+    .video-box .ratio {
+        height: 200px;
+    }
+    
+    .form-container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+    .form-section-elegant {
+        padding: 1rem;
+        transform: translateY(0);
+    }
+    
+    .form-item {
+        flex: 100%;
+        min-width: 100%;
+    }
+    
+    .button-item {
+        margin-top: 0.5rem;
+    }
+    
+    .faq-section h2,
+    .review-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .free_sub .step h3 {
+        font-size: 1.8rem;
+        margin: 1.3rem 0;
+    }
+    
+    .free_sub .step i {
+        font-size: 2.5rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.95rem;
         width: 100%;
-        margin-bottom: 4%;
     }
-
-    .navbar-nav .btn {
-        margin: 0.2rem 0.5rem;
+    
+    .review-card {
+        padding: 0;
     }
-
-    .subscribe-box h2 {
-        font-size: 2rem;
+    
+    .review-text {
+        font-size: 1rem;
     }
-
+    
+    .review-rating i {
+        font-size: 1rem;
+    }
+    
+    .review-avatar {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .review-author-info h6 {
+        font-size: 1rem;
+    }
+    
     .subscribe-box {
         padding: 2rem 1rem;
     }
-
-    .mobile-margin {
-        margin: 1rem;
+    
+    .subscribe-box h2 {
+        font-size: 1.8rem;
+    }
+    
+    .subscribe-form button {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    
+    .footer-main {
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
+    }
+    
+    .footer-social h6::after, 
+    .footer-links h6::after, 
+    .footer-contact h6::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-links ul li a:hover {
+        padding-left: 0;
+    }
+    
+    .footer-social, 
+    .footer-links, 
+    .footer-contact {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .footer-contact ul li {
+        justify-content: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .legal-links {
+        justify-content: center;
+        margin-top: 1rem;
     }
 }
 
 /* Tablet: 480px - 767px */
-@media (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px) {
     .hero h1 {
         font-size: 2.5rem;
         text-align: center;
@@ -57,77 +170,144 @@
 
     .hero {
         text-align: left;
-        padding: 0rem 1rem;
+        padding: 0;
         padding-bottom: 0;
     }
 
-    .icon-list-hero ul {
+    .features-list {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 0.8rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-container {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .hero-container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .hero-content-wrapper {
+        align-items: center;
+        text-align: center;
     }
 
+    .video-box {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .video-box .ratio {
+        height: 250px;
+    }
+    
+    .form-container {
+        padding-top: 0;
+        padding-bottom: 1rem;
+    }
+    
+    .form-section-elegant {
+        padding: 1.5rem;
+        transform: translateY(0);
+    }
+    
+    .form-inline-wrapper {
+        gap: 0.75rem;
+    }
+    
+    .form-item {
+        flex: 1 0 calc(50% - 0.75rem);
+        min-width: calc(50% - 0.75rem);
+    }
+    
+    .button-item {
+        flex: 1 0 100%;
+        margin-top: 0.5rem;
+    }
+    
     .free_sub {
         gap: 1.2rem;
     }
-
-    .faqsection h2 {
-        font-size: 2rem;
+    
+    .free_sub .step {
+        margin-bottom: 1.5rem;
     }
-
-    .user-review p {
-        width: 80%;
+    
+    .subscribe-form {
+        flex-direction: column;
     }
-
-    .subscribe-box input {
+    
+    .subscribe-form button {
         width: 100%;
-        margin-bottom: 4%;
     }
-
-    .navbar-nav .btn {
-        margin: 0.2rem 0.5rem;
+    
+    .footer-main {
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
     }
-
-    .subscribe-box h2 {
+    
+    .footer-social h6::after, 
+    .footer-links h6::after, 
+    .footer-contact h6::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-links ul li a:hover {
+        padding-left: 0;
+    }
+    
+    .footer-social, 
+    .footer-links, 
+    .footer-contact {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .footer-contact ul li {
+        justify-content: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .legal-links {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .faq-section h2 {
         font-size: 2rem;
     }
-
-    .subscribe-box {
-        padding: 2rem 1rem;
+    
+    .section-subtitle {
+        font-size: 1rem;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
-
-    .mobile-margin {
-        margin: 1rem;
+    
+    .review-card {
+        padding: 0.5rem;
     }
-
+    
+    .review-text {
+        font-size: 1.1rem;
+    }
+    
+    .review-indicators {
+        bottom: -1.5rem;
+    }
+    
     .second-heading {
-        font-size: 1.7rem;
-    }
-
-    .free_sub {
-        & .step {
-            h3 {
-                font-size: 1.4rem;
-                margin: 1.3rem 0;
-            }
-        }
-    }
-    .free_sub {
-        & .step {
-            i {
-                font-size: 2.5rem;
-            }
-        }
-    }
-
-    .user-review {
-        .review-text {
-            font-size: 1.2rem;
-        }
-    }
-    .subscribe-box button {
-        width: 100%;
+        font-size: 2rem;
     }
 }
 
@@ -139,52 +319,160 @@
 
     .hero {
         text-align: left;
-        padding: 0rem 1rem;
+        padding: 0;
         padding-bottom: 0;
     }
 
-    .icon-list-hero ul {
-        flex-direction: column;
+    .features-list {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 1.5rem;
     }
-
-    .faqsection h2 {
-        font-size: 2rem;
+    
+    .hero-container {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
     }
-
-    .user-review p {
-        width: 80%;
-    }
-
-    .subscribe-box input {
+    
+    .video-box {
         width: 100%;
-        margin-bottom: 4%;
+    }
+    
+    .video-box .ratio {
+        height: 280px;
+    }
+    
+    .form-container {
+        padding-top: 0;
+        padding-bottom: 1rem;
+    }
+    
+    .form-section-elegant {
+        transform: translateY(-15px);
+    }
+    
+    .form-item {
+        flex: 1;
+    }
+    
+    .button-item {
+        min-width: 180px;
+        flex: 0 0 auto;
     }
 
-    .navbar-nav .btn {
-        margin: 0.2rem 0.5rem;
+    .faq-section h2 {
+        font-size: 2.5rem;
     }
 
-    .subscribe-box h2 {
-        font-size: 2rem;
+    .section-subtitle {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .review-card {
+        max-width: 90%;
+    }
+    
+    .review-control {
+        width: 36px;
+        height: 36px;
     }
 
+    .subscribe-form {
+        display: flex;
+        align-items: center;
+    }
+
+    .subscribe-form input {
+        flex: 1;
+    }
+
+    .subscribe-form button {
+        flex: 0 0 auto;
+    }
+    
     .subscribe-box {
-        padding: 2rem 1rem;
+        padding: 2.5rem;
     }
-
-    .mobile-margin {
-        margin: 1rem;
+    
+    .footer-brand {
+        max-width: 90%;
     }
 }
 
 /* MacBook / HD: 1024px - 1439px */
 @media (min-width: 1024px) and (max-width: 1439px) {
+    .hero-container {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+    
+    .video-box .ratio {
+        height: 320px;
+    }
+    
+    .form-container {
+        margin: 0 auto;
+    }
+    
+    .form-section-elegant {
+        transform: translateY(-25px);
+    }
 }
 
 /* LCD / 2K: 1440px - 2559px */
 @media (min-width: 1440px) and (max-width: 2559px) {
+    .hero-container {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    
+    .video-box .ratio {
+        height: 350px;
+    }
+    
+    .form-section-elegant {
+        transform: translateY(-30px);
+    }
 }
 
 /* 4K Display: 2560px and above */
 @media (min-width: 2560px) {
+    .hero-container {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    
+    .video-box .ratio {
+        height: 450px;
+    }
+    
+    .hero h1 {
+        font-size: 5rem;
+    }
+    
+    .hero p {
+        font-size: 1.25rem;
+    }
+    
+    .form-container {
+        margin: 0 auto;
+        max-width: 1600px;
+    }
+    
+    .form-section-elegant {
+        transform: translateY(-40px);
+        padding: 2rem;
+    }
+    
+    .form-item input {
+        height: 60px;
+        font-size: 1.1rem;
+    }
+    
+    .button-golden-elegant {
+        height: 60px;
+        font-size: 1.1rem;
+    }
 }

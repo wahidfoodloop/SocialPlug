@@ -31,19 +31,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link text-white text-center" href="#">Home</a>
+                            <a class="nav-link text-center active" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white text-center" href="#">About</a>
+                            <a class="nav-link text-center" href="#">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white text-center" href="#">Services</a>
+                            <a class="nav-link text-center" href="#">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white text-center" href="#">Pricing</a>
+                            <a class="nav-link text-center" href="#">Pricing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white text-center" href="#">Contact</a>
+                            <a class="nav-link text-center" href="#">Contact</a>
                         </li>
                     </ul>
                     <div class="d-flex justify-content-center">
@@ -54,39 +54,64 @@
             </div>
         </nav>
     </header>
-    <div class="container my-5 px-3 px-md-5">
-        <div class="row">
+    <div class="container hero-container">
+        <div class="row g-4 align-items-center">
             <div class="col-md-6">
-                <section class="hero">
-                    <h1>Free Youtube Subscribers</h1>
-                    <p>Get free subscribers to your page today. Up to 50 subscribers at no cost. Delivered instantly.
-                    </p>
-                </section>
-                <div class="row icon-list-hero">
-                    <div class="col-md-12">
-                        <ul>
-                            <li><i class="fa-regular fa-clock"></i> Limited Time Offer</li>
-                            <li><i class="fa-solid fa-shield"></i> 100% safe</li>
-                            <li><i class="fa-solid fa-bolt-lightning"></i>Fast Delivery</li>
-                        </ul>
+                <div class="hero-content-wrapper">
+                    <section class="hero">
+                        <h1>Free Youtube Subscribers</h1>
+                        <p>Get free subscribers to your page today. Up to 50 subscribers at no cost. Delivered instantly.
+                        </p>
+                    </section>
+                    <div class="row icon-list-hero mt-4">
+                        <div class="col-md-12">
+                            <ul class="features-list">
+                                <li><i class="fa-regular fa-clock"></i> Limited Time Offer</li>
+                                <li><i class="fa-solid fa-shield"></i> 100% Safe</li>
+                                <li><i class="fa-solid fa-bolt-lightning"></i> Fast Delivery</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 d-flex justify-content-end">
-                <section class="form-section">
-                    <label for="">Enter your Email here.</label>
-                    <input type="email" placeholder="john@socialplug.com">
-                    <label for="">Enter your link here.</label>
-                    <input type="url" placeholder="https://www.youtube.com/channel/abcedf">
-                    <label for="">Subscribers Goal</label>
-                    <input type="number" placeholder="50">
-                    <button class="button-golden">Get Free Subscribers</button>
+            <div class="col-md-6">
+                <div class="video-box">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/mAg8UyDt_sw" title="YouTube Tutorial" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-caption">
+                        <p><i class="fa-solid fa-circle-play"></i> Watch how SocialPlug can grow your channel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Form Section -->
+    <div class="container form-container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <section class="form-section-elegant">
+                    <div class="form-inline-wrapper">
+                        <div class="form-item">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                        </div>
+                        <div class="form-item">
+                            <input type="url" class="form-control" placeholder="YouTube channel link">
+                        </div>
+                        <div class="form-item subscribers-item">
+                            <input type="number" class="form-control" placeholder="Subscribers (max 50)" min="1" max="50">
+                        </div>
+                        <div class="form-item button-item">
+                            <button class="button-golden-elegant">Get Subscribers <i class="fa-solid fa-arrow-right ms-2"></i></button>
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>
     </div>
 
-    <div class="container my-2 py-3 py-lg-5 px-3 px-md-5">
+    <div class="container section-container steps-section">
         <div class="row">
             <div class="col-md-12 text-center subscribers-sec">
                 <h2 class="second-heading">Want to get more free Subscribers?</h2>
@@ -97,7 +122,7 @@
             </div>
         </div>
         <div class="row free_sub">
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
                 <div class="step">
                     <i class="fa-regular fa-address-card"></i>
                     <h3>Sign Up</h3>
@@ -107,14 +132,14 @@
                         account</p>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
                 <div class="step">
                     <i class="fa-solid fa-piggy-bank"></i>
                     <h3>Earn Credits</h3>
                     <p>Complete tasks and get <span style="color: #facc15;">credits</span></p>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 mt-md-4 mt-lg-0">
+            <div class="col-12 col-md-6 col-lg-4 mx-auto">
                 <div class="step">
                     <i class="fa-regular fa-credit-card"></i>
                     <h3>Get Subscribers</h3>
@@ -123,8 +148,9 @@
             </div>
         </div>
     </div>
+    
     {{-- faqs --}}
-    <section class="container my-5 faqsection px-3 px-md-5">
+    <section class="container section-container faq-section">
         <h2 class="text-center text-white mb-4 second-heading">Frequently Asked Questions</h2>
         <div class="row justify-content-center">
             <div class="col-md-12">
@@ -181,69 +207,95 @@
     </section>
 
     {{-- User Review --}}
-    <div class="container py-4 py-lg-5 user-review px-1 px-md-5">
+    <div class="container section-container review-section">
         <div class="row align-items-center">
             <div class="col-md-12 text-center">
-                <h2 class="second-heading">User's Reviews</h2>
-                <p>Discover What our Users have to say about <span>
-                        SocialPlug 10,000+
-                    </span> Positive reviews </p>
+                <h2 class="second-heading">User Reviews</h2>
+                <p class="section-subtitle">Discover what our users have to say about <span>SocialPlug</span> — Over <span>10,000+</span> positive reviews</p>
             </div>
         </div>
-        {{-- Customer Review Carcousel --}}
-        <div class="row">
+        {{-- Customer Review Carousel --}}
+        <div class="row mt-4">
             <div class="col-md-12">
-                <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner bg-darkblue p-5 rounded">
+                <div id="reviewsCarousel" class="carousel slide reviews-carousel" data-bs-ride="carousel">
+                    <div class="carousel-indicators review-indicators">
+                        <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Review 1"></button>
+                        <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="1" aria-label="Review 2"></button>
+                        <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="2" aria-label="Review 3"></button>
+                    </div>
+                    <div class="carousel-inner bg-darkblue p-4 p-md-5 rounded">
                         <div class="carousel-item active">
-                            <blockquote class="blockquote text-center">
-                                <p class="mb-4 review-text">Flowbite is just awesome...5</p>
-                                <div class="d-flex align-items-center justify-content-center review-info">
-                                    <div class="d-flex flex-column flex-md-row gap-3 gap-md-1 align-items-center">
-                                        <img src="{{ asset('img/user-profile.png') }}" alt="user picture"
-                                            class="me-2" />
-                                        <h6>Bonnie Green</h6>
-                                        <p class="ms-1">| <span>CTO at Flowbite</span></p>
-                                    </div>
+                            <div class="review-card">
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </div>
-                            </blockquote>
+                                <blockquote class="blockquote">
+                                    <p class="mb-4 review-text">"SocialPlug helped me grow my YouTube channel from 100 to over 5,000 subscribers in just three months. The engagement is real and the process was incredibly easy."</p>
+                                    <footer class="review-author">
+                                        <img src="{{ asset('img/user-profile.png') }}" alt="Bonnie Green" class="review-avatar" />
+                                        <div class="review-author-info">
+                                            <h6>Bonnie Green</h6>
+                                            <p>Content Creator</p>
+                                        </div>
+                                    </footer>
+                                </blockquote>
+                            </div>
                         </div>
                         <div class="carousel-item">
-                            <blockquote class="blockquote text-center">
-                                <p class="mb-4 review-text">Excellent platform to gain exposure and real engagement.
-                                </p>
-                                <div class="d-flex align-items-center justify-content-center review-info">
-                                    <div class="d-flex flex-column flex-md-row gap-3 gap-md-1 align-items-center">
-                                        <img src="{{ asset('img/user-profile.png') }}" alt="user picture"
-                                            class="me-2" />
-                                        <h6>Alex Brown</h6>
-                                        <p class="ms-1">| <span>Content Creator</span></p>
-                                    </div>
+                            <div class="review-card">
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </div>
-                            </blockquote>
+                                <blockquote class="blockquote">
+                                    <p class="mb-4 review-text">"Excellent platform to gain real exposure and engagement. The subscriber quality is much better than any other service I've tried, and the support team is incredibly helpful."</p>
+                                    <footer class="review-author">
+                                        <img src="{{ asset('img/user-profile.png') }}" alt="Alex Brown" class="review-avatar" />
+                                        <div class="review-author-info">
+                                            <h6>Alex Brown</h6>
+                                            <p>Digital Marketer</p>
+                                        </div>
+                                    </footer>
+                                </blockquote>
+                            </div>
                         </div>
                         <div class="carousel-item">
-                            <blockquote class="blockquote text-center">
-                                <p class="mb-4 review-text">Simple and effective. Highly recommended!</p>
-                                <div class="d-flex align-items-center justify-content-center review-info">
-                                    <div class="d-flex flex-column flex-md-row gap-3 gap-md-1 align-items-center">
-                                        <img src="{{ asset('img/user-profile.png') }}" alt="user picture"
-                                            class="me-2" />
-                                        <h6>Taylor Smith</h6>
-                                        <p class="ms-1">| <span>Marketing Specialist</span></p>
-                                    </div>
+                            <div class="review-card">
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
                                 </div>
-                            </blockquote>
+                                <blockquote class="blockquote">
+                                    <p class="mb-4 review-text">"Simple, effective, and reliable. SocialPlug delivered exactly what they promised, and my channel has seen a significant boost in views and engagement. Highly recommended!"</p>
+                                    <footer class="review-author">
+                                        <img src="{{ asset('img/user-profile.png') }}" alt="Taylor Smith" class="review-avatar" />
+                                        <div class="review-author-info">
+                                            <h6>Taylor Smith</h6>
+                                            <p>YouTube Influencer</p>
+                                        </div>
+                                    </footer>
+                                </blockquote>
+                            </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel"
+                    <button class="carousel-control-prev review-control" type="button" data-bs-target="#reviewsCarousel"
                         data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <i class="fas fa-chevron-left"></i>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel"
+                    <button class="carousel-control-next review-control" type="button" data-bs-target="#reviewsCarousel"
                         data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <i class="fas fa-chevron-right"></i>
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
@@ -251,97 +303,115 @@
         </div>
     </div>
 
-    <div class="container px-1 px-md-5 px-3">
+    <div class="container section-container subscribe-section">
         <div class="subscribe-box">
-            <div class="row">
-                <div class="col-lg-7">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-4 mb-lg-0">
                     <h2>Join 2,000+ subscribers</h2>
                     <p>Stay in the loop with everything you need to know</p>
                 </div>
                 <div class="col-lg-5">
-                    <div>
-                        <input type="email" placeholder="Enter your email" class="me-2">
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter your email">
                         <button>Subscribe</button>
                     </div>
-                    <p>we care about your data in our privacy policy</p>
+                    <p class="privacy-text">we care about your data in our privacy policy</p>
                 </div>
             </div>
         </div>
     </div>
 
     {{-- footer --}}
-
-    <footer class="bg-darkblue text-light py-4 py-lg-5 footer">
-        <div class="container py-lg-5 my-lg-4">
-            <div class="row">
-                <div class="mobile-margin col-md-3">
-                    <div>
-                        <img src="{{ asset('img/logo.png') }}" alt="Logo" class="logo-img img-fluid">
+    <footer class="footer-section">
+        <div class="footer-main bg-darkblue">
+            <div class="container section-container">
+                <div class="row">
+                    <div class="col-md-4 col-lg-3 mb-4 mb-md-0">
+                        <div class="footer-brand">
+                            <img src="{{ asset('img/logo.png') }}" alt="SocialPlug Logo" class="logo-img img-fluid">
+                            <p class="footer-text">Grow your YouTube channel easily and effectively with our subscriber exchange network.</p>
+                        </div>
+                        <div class="footer-social">
+                            <h6>Connect With Us</h6>
+                            <div class="social-icons">
+                                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <p class="footer-text">Grow your YouTube channel easily and effectively with our subscriber
-                        exchange network.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <div class="col-6 col-sm-6 col-md-3 col-lg-2 mb-4 mb-md-0">
+                        <div class="footer-links">
+                            <h6>Company</h6>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Press</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="mobile-margin col-md-2">
-                    <h6>About Us</h6>
-                    <ul>
-                        <li><a href="#">Company History</a></li>
-                        <li><a href="#">Meet the Team</a></li>
-                        <li><a href="#">Employee Handbook</a></li>
-                        <li><a href="#">Careers</a></li>
-                    </ul>
-                </div>
-                <div class="mobile-margin col-md-2">
-                    <h6>Our Services</h6>
-                    <ul>
-
-                        <li> <a href="#">YouTube Growth</a></li>
-                        <li> <a href="#">Social Media Marketing</a></li>
-                        <li> <a href="#">Channel Management</a></li>
-                        <li> <a href="#">Content Creation</a></li>
-                </div>
-                <div class="mobile-margin col-md-2">
-                    <h6>Helpful Links</h6>
-                    <ul>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="mobile-margin col-md-3">
-                    <h6>Contact Us</h6>
-                    <ul>
-                        <li>
-                            <p><i class="fa-regular fa-envelope"></i> support@socialplug.com</p>
-                        </li>
-                        <li>
-                            <p><i class="fa-solid fa-location-dot"></i> 213 Lane, London, UK</p>
-                        </li>
-                    </ul>
+                    <div class="col-6 col-sm-6 col-md-3 col-lg-2 mb-4 mb-md-0">
+                        <div class="footer-links">
+                            <h6>Services</h6>
+                            <ul>
+                                <li><a href="#">YouTube Growth</a></li>
+                                <li><a href="#">Social Media Marketing</a></li>
+                                <li><a href="#">Channel Management</a></li>
+                                <li><a href="#">Content Creation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-3 col-lg-2 mb-4 mb-md-0">
+                        <div class="footer-links">
+                            <h6>Resources</h6>
+                            <ul>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Guides</a></li>
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Support Center</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-3 col-lg-3 mb-4 mb-md-0">
+                        <div class="footer-contact">
+                            <h6>Contact Us</h6>
+                            <ul>
+                                <li>
+                                    <i class="fa-regular fa-envelope"></i>
+                                    <a href="mailto:support@socialplug.com">support@socialplug.com</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-phone"></i>
+                                    <a href="tel:+442012345678">+44 20 1234 5678</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>123 Business Avenue, London, UK</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-
         </div>
-
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row py-3 align-items-center">
+                    <div class="col-md-6 text-center text-md-start copyright">
+                        <p>&copy; 2025 SocialPlug Ltd. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end legal-links">
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
-    <div class="container">
-        <div class="row ">
-            <div class="col-12 col-md-6 text-center text-md-start" style="color: var(--text-color)">
-                &copy; 2025 SocialPlug. All rights reserved.
-            </div>
-            <div class="col-12 col-md-6 text-center text-md-end footer-links">
-                All Rights Reserved
-                <a href="#">Terms & Conditions</a>
-                <a href="#">Privacy Policy</a>
-            </div>
-        </div>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
