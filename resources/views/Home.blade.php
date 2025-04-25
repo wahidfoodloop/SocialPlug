@@ -15,6 +15,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 
 <body>
@@ -24,8 +26,9 @@
                 <a class="navbar-brand text-white fw-bold" href="#">
                     <img src="{{ asset('img/logo.png') }}" alt="Logo" class="logo-img img-fluid">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <i class="fas fa-bars text-white"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -57,27 +60,32 @@
     <div class="container hero-container">
         <div class="row g-4 align-items-center">
             <div class="col-md-6">
-                <div class="hero-content-wrapper">
+                <div class="hero-content-wrapper" data-aos="fade-right" data-aos-duration="1000">
                     <section class="hero">
                         <h1>Free Youtube Subscribers</h1>
-                        <p>Get free subscribers to your page today. Up to 50 subscribers at no cost. Delivered instantly.
+                        <p>Get free subscribers to your page today. Up to 50 subscribers at no cost. Delivered
+                            instantly.
                         </p>
                     </section>
                     <div class="row icon-list-hero mt-4">
                         <div class="col-md-12">
                             <ul class="features-list">
-                                <li><i class="fa-regular fa-clock"></i> Limited Time Offer</li>
-                                <li><i class="fa-solid fa-shield"></i> 100% Safe</li>
-                                <li><i class="fa-solid fa-bolt-lightning"></i> Fast Delivery</li>
+                                <li data-aos="fade-up" data-aos-delay="100"><i class="fa-regular fa-clock"></i> Limited
+                                    Time Offer</li>
+                                <li data-aos="fade-up" data-aos-delay="200"><i class="fa-solid fa-shield"></i> 100% Safe
+                                </li>
+                                <li data-aos="fade-up" data-aos-delay="300"><i class="fa-solid fa-bolt-lightning"></i>
+                                    Fast Delivery</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="video-box">
+                <div class="video-box" data-aos="fade-left" data-aos-duration="1000">
                     <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/mAg8UyDt_sw" title="YouTube Tutorial" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/mAg8UyDt_sw" title="YouTube Tutorial"
+                            allowfullscreen></iframe>
                     </div>
                     <div class="video-caption">
                         <p><i class="fa-solid fa-circle-play"></i> Watch how SocialPlug can grow your channel</p>
@@ -86,12 +94,12 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Form Section -->
     <div class="container form-container">
         <div class="row justify-content-center">
             <div class="col-12">
-                <section class="form-section-elegant">
+                <section class="form-section-elegant" data-aos="fade-up" data-aos-duration="800">
                     <div class="form-inline-wrapper">
                         <div class="form-item">
                             <input type="email" class="form-control" placeholder="Enter your email">
@@ -100,10 +108,12 @@
                             <input type="url" class="form-control" placeholder="YouTube channel link">
                         </div>
                         <div class="form-item subscribers-item">
-                            <input type="number" class="form-control" placeholder="Subscribers (max 50)" min="1" max="50">
+                            <input type="number" class="form-control" placeholder="Subscribers (max 50)"
+                                min="1" max="50">
                         </div>
                         <div class="form-item button-item">
-                            <button class="button-golden-elegant">Get Subscribers <i class="fa-solid fa-arrow-right ms-2"></i></button>
+                            <button class="button-golden-elegant">Get Subscribers <i
+                                    class="fa-solid fa-arrow-right ms-2"></i></button>
                         </div>
                     </div>
                 </section>
@@ -113,7 +123,7 @@
 
     <div class="container section-container steps-section">
         <div class="row">
-            <div class="col-md-12 text-center subscribers-sec">
+            <div class="col-md-12 text-center subscribers-sec" data-aos="fade-up">
                 <h2 class="second-heading">Want to get more free Subscribers?</h2>
                 <p>Follow the three simple steps to get started with
                     <span>
@@ -123,7 +133,7 @@
         </div>
         <div class="row free_sub">
             <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-                <div class="step">
+                <div class="step hover-card" data-aos="fade-up" data-aos-delay="100">
                     <i class="fa-regular fa-address-card"></i>
                     <h3>Sign Up</h3>
                     <p>Create a <span style="color: #facc15;">
@@ -133,14 +143,14 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-                <div class="step">
+                <div class="step hover-card" data-aos="fade-up" data-aos-delay="300">
                     <i class="fa-solid fa-piggy-bank"></i>
                     <h3>Earn Credits</h3>
                     <p>Complete tasks and get <span style="color: #facc15;">credits</span></p>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 mx-auto">
-                <div class="step">
+                <div class="step hover-card" data-aos="fade-up" data-aos-delay="500">
                     <i class="fa-regular fa-credit-card"></i>
                     <h3>Get Subscribers</h3>
                     <p>Use credits to get <span style="color: #facc15;">subscribers</span></p>
@@ -148,14 +158,14 @@
             </div>
         </div>
     </div>
-    
+
     {{-- faqs --}}
     <section class="container section-container faq-section">
-        <h2 class="text-center text-white mb-4 second-heading">Frequently Asked Questions</h2>
+        <h2 class="text-center text-white mb-4 second-heading" data-aos="fade-up">Frequently Asked Questions</h2>
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <div class="accordion" id="faqAccordion">
-                    <div class="accordion-item bg-darkblue text-white">
+                <div class="accordion" id="faqAccordion" data-aos="fade-up" data-aos-delay="200">
+                    <div class="accordion-item bg-darkblue text-white hover-card">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button bg-darkblue text-white" type="button"
                                 data-bs-toggle="collapse" data-bs-target="#collapseOne">
@@ -174,7 +184,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-darkblue text-white">
+                    <div class="accordion-item bg-darkblue text-white hover-card">
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed bg-darkblue text-white" type="button"
                                 data-bs-toggle="collapse" data-bs-target="#collapseTwo">
@@ -187,7 +197,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item bg-darkblue text-white">
+                    <div class="accordion-item bg-darkblue text-white hover-card">
                         <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed bg-darkblue text-white" type="button"
                                 data-bs-toggle="collapse" data-bs-target="#collapseThree">
@@ -209,19 +219,25 @@
     {{-- User Review --}}
     <div class="container section-container review-section">
         <div class="row align-items-center">
-            <div class="col-md-12 text-center">
+            <div class="col-md-12 text-center" data-aos="fade-up">
                 <h2 class="second-heading">User Reviews</h2>
-                <p class="section-subtitle">Discover what our users have to say about <span>SocialPlug</span> — Over <span>10,000+</span> positive reviews</p>
+                <p class="section-subtitle">Discover what our users have to say about <span>SocialPlug</span> — Over
+                    <span>10,000+</span> positive reviews
+                </p>
             </div>
         </div>
         {{-- Customer Review Carousel --}}
         <div class="row mt-4">
             <div class="col-md-12">
-                <div id="reviewsCarousel" class="carousel slide reviews-carousel" data-bs-ride="carousel">
+                <div id="reviewsCarousel" class="carousel slide reviews-carousel" data-bs-ride="carousel"
+                    data-aos="fade-up" data-aos-delay="200">
                     <div class="carousel-indicators review-indicators">
-                        <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Review 1"></button>
-                        <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="1" aria-label="Review 2"></button>
-                        <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="2" aria-label="Review 3"></button>
+                        <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Review 1"></button>
+                        <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="1"
+                            aria-label="Review 2"></button>
+                        <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="2"
+                            aria-label="Review 3"></button>
                     </div>
                     <div class="carousel-inner bg-darkblue p-4 p-md-5 rounded">
                         <div class="carousel-item active">
@@ -234,9 +250,12 @@
                                     <i class="fas fa-star"></i>
                                 </div>
                                 <blockquote class="blockquote">
-                                    <p class="mb-4 review-text">"SocialPlug helped me grow my YouTube channel from 100 to over 5,000 subscribers in just three months. The engagement is real and the process was incredibly easy."</p>
+                                    <p class="mb-4 review-text">"SocialPlug helped me grow my YouTube channel from 100
+                                        to over 5,000 subscribers in just three months. The engagement is real and the
+                                        process was incredibly easy."</p>
                                     <footer class="review-author">
-                                        <img src="{{ asset('img/user-profile.png') }}" alt="Bonnie Green" class="review-avatar" />
+                                        <img src="{{ asset('img/user-profile.png') }}" alt="Bonnie Green"
+                                            class="review-avatar" />
                                         <div class="review-author-info">
                                             <h6>Bonnie Green</h6>
                                             <p>Content Creator</p>
@@ -255,9 +274,12 @@
                                     <i class="fas fa-star"></i>
                                 </div>
                                 <blockquote class="blockquote">
-                                    <p class="mb-4 review-text">"Excellent platform to gain real exposure and engagement. The subscriber quality is much better than any other service I've tried, and the support team is incredibly helpful."</p>
+                                    <p class="mb-4 review-text">"Excellent platform to gain real exposure and
+                                        engagement. The subscriber quality is much better than any other service I've
+                                        tried, and the support team is incredibly helpful."</p>
                                     <footer class="review-author">
-                                        <img src="{{ asset('img/user-profile.png') }}" alt="Alex Brown" class="review-avatar" />
+                                        <img src="{{ asset('img/user-profile.png') }}" alt="Alex Brown"
+                                            class="review-avatar" />
                                         <div class="review-author-info">
                                             <h6>Alex Brown</h6>
                                             <p>Digital Marketer</p>
@@ -276,9 +298,12 @@
                                     <i class="fas fa-star-half-alt"></i>
                                 </div>
                                 <blockquote class="blockquote">
-                                    <p class="mb-4 review-text">"Simple, effective, and reliable. SocialPlug delivered exactly what they promised, and my channel has seen a significant boost in views and engagement. Highly recommended!"</p>
+                                    <p class="mb-4 review-text">"Simple, effective, and reliable. SocialPlug delivered
+                                        exactly what they promised, and my channel has seen a significant boost in views
+                                        and engagement. Highly recommended!"</p>
                                     <footer class="review-author">
-                                        <img src="{{ asset('img/user-profile.png') }}" alt="Taylor Smith" class="review-avatar" />
+                                        <img src="{{ asset('img/user-profile.png') }}" alt="Taylor Smith"
+                                            class="review-avatar" />
                                         <div class="review-author-info">
                                             <h6>Taylor Smith</h6>
                                             <p>YouTube Influencer</p>
@@ -288,13 +313,13 @@
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev review-control" type="button" data-bs-target="#reviewsCarousel"
-                        data-bs-slide="prev">
+                    <button class="carousel-control-prev review-control" type="button"
+                        data-bs-target="#reviewsCarousel" data-bs-slide="prev">
                         <i class="fas fa-chevron-left"></i>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next review-control" type="button" data-bs-target="#reviewsCarousel"
-                        data-bs-slide="next">
+                    <button class="carousel-control-next review-control" type="button"
+                        data-bs-target="#reviewsCarousel" data-bs-slide="next">
                         <i class="fas fa-chevron-right"></i>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -304,7 +329,7 @@
     </div>
 
     <div class="container section-container subscribe-section">
-        <div class="subscribe-box">
+        <div class="subscribe-box" data-aos="fade-up">
             <div class="row align-items-center">
                 <div class="col-lg-7 mb-4 mb-lg-0">
                     <h2>Join 2,000+ subscribers</h2>
@@ -313,7 +338,7 @@
                 <div class="col-lg-5">
                     <div class="subscribe-form">
                         <input type="email" placeholder="Enter your email">
-                        <button>Subscribe</button>
+                        <button class="pulse-button">Subscribe</button>
                     </div>
                     <p class="privacy-text">we care about your data in our privacy policy</p>
                 </div>
@@ -326,65 +351,75 @@
         <div class="footer-main bg-darkblue">
             <div class="container section-container">
                 <div class="row">
-                    <div class="col-md-4 col-lg-3 mb-4 mb-md-0">
+                    <div class="col-md-4 col-lg-3 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="100">
                         <div class="footer-brand">
                             <img src="{{ asset('img/logo.png') }}" alt="SocialPlug Logo" class="logo-img img-fluid">
-                            <p class="footer-text">Grow your YouTube channel easily and effectively with our subscriber exchange network.</p>
+                            <p class="footer-text">Grow your YouTube channel easily and effectively with our subscriber
+                                exchange network.</p>
                         </div>
                         <div class="footer-social">
                             <h6>Connect With Us</h6>
                             <div class="social-icons">
-                                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="#" aria-label="Facebook" class="social-hover"><i
+                                        class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram" class="social-hover"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter" class="social-hover"><i
+                                        class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" aria-label="YouTube" class="social-hover"><i
+                                        class="fa-brands fa-youtube"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-sm-6 col-md-3 col-lg-2 mb-4 mb-md-0">
+                    <div class="col-6 col-sm-6 col-md-3 col-lg-2 mb-4 mb-md-0" data-aos="fade-up"
+                        data-aos-delay="200">
                         <div class="footer-links">
                             <h6>Company</h6>
                             <ul>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Our Team</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">Press</a></li>
+                                <li><a href="#" class="link-hover">About Us</a></li>
+                                <li><a href="#" class="link-hover">Our Team</a></li>
+                                <li><a href="#" class="link-hover">Careers</a></li>
+                                <li><a href="#" class="link-hover">Press</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-6 col-sm-6 col-md-3 col-lg-2 mb-4 mb-md-0">
+                    <div class="col-6 col-sm-6 col-md-3 col-lg-2 mb-4 mb-md-0" data-aos="fade-up"
+                        data-aos-delay="300">
                         <div class="footer-links">
                             <h6>Services</h6>
                             <ul>
-                                <li><a href="#">YouTube Growth</a></li>
-                                <li><a href="#">Social Media Marketing</a></li>
-                                <li><a href="#">Channel Management</a></li>
-                                <li><a href="#">Content Creation</a></li>
+                                <li><a href="#" class="link-hover">YouTube Growth</a></li>
+                                <li><a href="#" class="link-hover">Social Media Marketing</a></li>
+                                <li><a href="#" class="link-hover">Channel Management</a></li>
+                                <li><a href="#" class="link-hover">Content Creation</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-6 col-sm-6 col-md-3 col-lg-2 mb-4 mb-md-0">
+                    <div class="col-6 col-sm-6 col-md-3 col-lg-2 mb-4 mb-md-0" data-aos="fade-up"
+                        data-aos-delay="400">
                         <div class="footer-links">
                             <h6>Resources</h6>
                             <ul>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Guides</a></li>
-                                <li><a href="#">FAQs</a></li>
-                                <li><a href="#">Support Center</a></li>
+                                <li><a href="#" class="link-hover">Blog</a></li>
+                                <li><a href="#" class="link-hover">Guides</a></li>
+                                <li><a href="#" class="link-hover">FAQs</a></li>
+                                <li><a href="#" class="link-hover">Support Center</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-6 col-sm-6 col-md-3 col-lg-3 mb-4 mb-md-0">
+                    <div class="col-6 col-sm-6 col-md-3 col-lg-3 mb-4 mb-md-0" data-aos="fade-up"
+                        data-aos-delay="500">
                         <div class="footer-contact">
                             <h6>Contact Us</h6>
                             <ul>
                                 <li>
                                     <i class="fa-regular fa-envelope"></i>
-                                    <a href="mailto:support@socialplug.com">support@socialplug.com</a>
+                                    <a href="mailto:support@socialplug.com"
+                                        class="link-hover">support@socialplug.com</a>
                                 </li>
                                 <li>
                                     <i class="fa-solid fa-phone"></i>
-                                    <a href="tel:+442012345678">+44 20 1234 5678</a>
+                                    <a href="tel:+442012345678" class="link-hover">+44 20 1234 5678</a>
                                 </li>
                                 <li>
                                     <i class="fa-solid fa-location-dot"></i>
@@ -396,7 +431,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <div class="container">
                 <div class="row py-3 align-items-center">
@@ -404,9 +439,9 @@
                         <p>&copy; 2025 SocialPlug Ltd. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 text-center text-md-end legal-links">
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Cookie Policy</a>
+                        <a href="#" class="link-hover">Terms of Service</a>
+                        <a href="#" class="link-hover">Privacy Policy</a>
+                        <a href="#" class="link-hover">Cookie Policy</a>
                     </div>
                 </div>
             </div>
@@ -418,6 +453,49 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
         integrity="sha512-4+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"
         referrerpolicy="no-referrer"></script>
+    <!-- AOS Animation Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animations
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                once: true, // Animation only happens once
+                offset: 120, // Offset from the bottom of window
+                duration: 800, // Default animation duration
+                easing: 'ease-out', // Default easing
+                delay: 100 // Default delay
+            });
+
+            // Close mobile menu when clicking on a nav link
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            const navbarCollapse = document.getElementById('navbarNav');
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                toggle: false
+            });
+
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth < 992) {
+                        bsCollapse.hide();
+                    }
+                });
+            });
+
+            // Add cursor tracking effect for interactive elements
+            const interactiveElements = document.querySelectorAll(
+                '.hover-card, .btn, .button-golden-elegant, .social-hover, .link-hover');
+            interactiveElements.forEach(element => {
+                element.addEventListener('mousemove', function(e) {
+                    const rect = this.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    this.style.setProperty('--x-pos', x + 'px');
+                    this.style.setProperty('--y-pos', y + 'px');
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

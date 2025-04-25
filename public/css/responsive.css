@@ -25,132 +25,144 @@
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
     }
-    
+
     .nav-link {
         text-align: center;
         margin: 0.25rem 0;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
-    
-    .nav-link::after {
-        display: none;
+
+    .nav-link.active {
+        color: var(--primary);
+        background-color: rgba(201, 164, 71, 0.1);
     }
-    
+
+    .navbar-collapse {
+        padding: 1rem 0;
+        margin-top: 0.5rem;
+    }
+
+    .navbar-nav {
+        margin-bottom: 1rem !important;
+    }
+
     .hero-content-wrapper {
         align-items: center;
         text-align: center;
     }
-    
+
     .video-box {
         margin-top: 1rem;
     }
-    
+
     .video-box .ratio {
         height: 200px;
     }
-    
+
     .form-container {
         padding-top: 0;
         padding-bottom: 0;
     }
-    
+
     .form-section-elegant {
         padding: 1rem;
         transform: translateY(0);
     }
-    
+
     .form-item {
         flex: 100%;
         min-width: 100%;
     }
-    
+
     .button-item {
         margin-top: 0.5rem;
     }
-    
+
     .faq-section h2,
     .review-section h2 {
         font-size: 1.8rem;
     }
-    
+
     .free_sub .step h3 {
         font-size: 1.8rem;
         margin: 1.3rem 0;
     }
-    
+
     .free_sub .step i {
         font-size: 2.5rem;
     }
-    
+
     .section-subtitle {
         font-size: 0.95rem;
         width: 100%;
     }
-    
+
     .review-card {
         padding: 0;
     }
-    
+
     .review-text {
         font-size: 1rem;
     }
-    
+
     .review-rating i {
         font-size: 1rem;
     }
-    
+
     .review-avatar {
         width: 50px;
         height: 50px;
     }
-    
+
     .review-author-info h6 {
         font-size: 1rem;
     }
-    
+
     .subscribe-box {
         padding: 2rem 1rem;
     }
-    
+
     .subscribe-box h2 {
         font-size: 1.8rem;
     }
-    
+
     .subscribe-form button {
         width: 100%;
         margin-top: 0.5rem;
     }
-    
+
     .footer-main {
         padding-top: 2rem;
         padding-bottom: 1.5rem;
     }
-    
-    .footer-social h6::after, 
-    .footer-links h6::after, 
+
+    .footer-social h6::after,
+    .footer-links h6::after,
     .footer-contact h6::after {
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
     .footer-links ul li a:hover {
         padding-left: 0;
     }
-    
-    .footer-social, 
-    .footer-links, 
+
+    .footer-social,
+    .footer-links,
     .footer-contact {
         text-align: center;
         margin-bottom: 2rem;
     }
-    
+
     .footer-contact ul li {
         justify-content: center;
     }
-    
+
     .social-icons {
         justify-content: center;
     }
-    
+
     .legal-links {
         justify-content: center;
         margin-top: 1rem;
@@ -181,17 +193,17 @@
         gap: 0.8rem;
         margin-bottom: 1.5rem;
     }
-    
+
     .section-container {
         padding-top: 3rem;
         padding-bottom: 3rem;
     }
-    
+
     .hero-container {
         padding-top: 2rem;
         padding-bottom: 2rem;
     }
-    
+
     .hero-content-wrapper {
         align-items: center;
         text-align: center;
@@ -202,110 +214,110 @@
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .video-box .ratio {
         height: 250px;
     }
-    
+
     .form-container {
         padding-top: 0;
         padding-bottom: 1rem;
     }
-    
+
     .form-section-elegant {
         padding: 1.5rem;
         transform: translateY(0);
     }
-    
+
     .form-inline-wrapper {
         gap: 0.75rem;
     }
-    
+
     .form-item {
         flex: 1 0 calc(50% - 0.75rem);
         min-width: calc(50% - 0.75rem);
     }
-    
+
     .button-item {
         flex: 1 0 100%;
         margin-top: 0.5rem;
     }
-    
+
     .free_sub {
         gap: 1.2rem;
     }
-    
+
     .free_sub .step {
         margin-bottom: 1.5rem;
     }
-    
+
     .subscribe-form {
         flex-direction: column;
     }
-    
+
     .subscribe-form button {
         width: 100%;
     }
-    
+
     .footer-main {
         padding-top: 2rem;
         padding-bottom: 1.5rem;
     }
-    
-    .footer-social h6::after, 
-    .footer-links h6::after, 
+
+    .footer-social h6::after,
+    .footer-links h6::after,
     .footer-contact h6::after {
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
     .footer-links ul li a:hover {
         padding-left: 0;
     }
-    
-    .footer-social, 
-    .footer-links, 
+
+    .footer-social,
+    .footer-links,
     .footer-contact {
         text-align: center;
         margin-bottom: 2rem;
     }
-    
+
     .footer-contact ul li {
         justify-content: center;
     }
-    
+
     .social-icons {
         justify-content: center;
     }
-    
+
     .legal-links {
         justify-content: center;
         margin-top: 1rem;
     }
-    
+
     .faq-section h2 {
         font-size: 2rem;
     }
-    
+
     .section-subtitle {
         font-size: 1rem;
         max-width: 90%;
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .review-card {
         padding: 0.5rem;
     }
-    
+
     .review-text {
         font-size: 1.1rem;
     }
-    
+
     .review-indicators {
         bottom: -1.5rem;
     }
-    
+
     .second-heading {
         font-size: 2rem;
     }
@@ -328,33 +340,33 @@
         justify-content: flex-start;
         gap: 1.5rem;
     }
-    
+
     .hero-container {
         padding-top: 2.5rem;
         padding-bottom: 2.5rem;
     }
-    
+
     .video-box {
         width: 100%;
     }
-    
+
     .video-box .ratio {
         height: 280px;
     }
-    
+
     .form-container {
         padding-top: 0;
         padding-bottom: 1rem;
     }
-    
+
     .form-section-elegant {
         transform: translateY(-15px);
     }
-    
+
     .form-item {
         flex: 1;
     }
-    
+
     .button-item {
         min-width: 180px;
         flex: 0 0 auto;
@@ -369,11 +381,11 @@
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .review-card {
         max-width: 90%;
     }
-    
+
     .review-control {
         width: 36px;
         height: 36px;
@@ -391,11 +403,11 @@
     .subscribe-form button {
         flex: 0 0 auto;
     }
-    
+
     .subscribe-box {
         padding: 2.5rem;
     }
-    
+
     .footer-brand {
         max-width: 90%;
     }
@@ -407,15 +419,15 @@
         padding-top: 3.5rem;
         padding-bottom: 3.5rem;
     }
-    
+
     .video-box .ratio {
         height: 320px;
     }
-    
+
     .form-container {
         margin: 0 auto;
     }
-    
+
     .form-section-elegant {
         transform: translateY(-25px);
     }
@@ -427,11 +439,11 @@
         padding-top: 4rem;
         padding-bottom: 4rem;
     }
-    
+
     .video-box .ratio {
         height: 350px;
     }
-    
+
     .form-section-elegant {
         transform: translateY(-30px);
     }
@@ -443,34 +455,34 @@
         padding-top: 6rem;
         padding-bottom: 6rem;
     }
-    
+
     .video-box .ratio {
         height: 450px;
     }
-    
+
     .hero h1 {
         font-size: 5rem;
     }
-    
+
     .hero p {
         font-size: 1.25rem;
     }
-    
+
     .form-container {
         margin: 0 auto;
         max-width: 1600px;
     }
-    
+
     .form-section-elegant {
         transform: translateY(-40px);
         padding: 2rem;
     }
-    
+
     .form-item input {
         height: 60px;
         font-size: 1.1rem;
     }
-    
+
     .button-golden-elegant {
         height: 60px;
         font-size: 1.1rem;
