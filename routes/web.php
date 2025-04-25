@@ -15,3 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[HomePage::class,'HomePage'])->name('home');
+Route::get('/puzzle', function() {
+    return view('Puzzle');
+})->name('puzzle');
