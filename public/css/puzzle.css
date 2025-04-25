@@ -822,7 +822,35 @@ h1, h2, h3, h4, h5, h6 {
 .floating-elements {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 450px;
+    z-index: 1;
+}
+
+/* Create a glow effect around the sphere container */
+.floating-elements::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    height: 450px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(32, 254, 107, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+    animation: pulseSlow 4s infinite alternate ease-in-out;
+}
+
+@keyframes pulseSlow {
+    0% { 
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0.3;
+    }
+    100% { 
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.6;
+    }
 }
 
 .hero-lottie-container {
@@ -995,12 +1023,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .digital-sphere {
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;
+    filter: drop-shadow(0 0 30px rgba(32, 254, 107, 0.15));
 }
 
 .platform-illustration {

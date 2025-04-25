@@ -618,59 +618,258 @@
             const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
             
             const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-            renderer.setSize(300, 300);
+            renderer.setSize(500, 500);
+            renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1);
             container.appendChild(renderer.domElement);
             
-            // Create sphere geometry
-            const geometry = new THREE.SphereGeometry(50, 32, 32);
-            const material = new THREE.MeshBasicMaterial({
+            // Create outer sphere geometry
+            const sphereGeometry = new THREE.SphereGeometry(70, 64, 64);
+            const sphereMaterial = new THREE.MeshBasicMaterial({
                 color: 0x20FE6B,
                 wireframe: true,
                 transparent: true,
-                opacity: 0.3
+                opacity: 0.4
             });
             
-            const sphere = new THREE.Mesh(geometry, material);
+            const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
             scene.add(sphere);
+            
+            // Create inner sphere geometry with different color
+            const innerSphereGeometry = new THREE.SphereGeometry(40, 32, 32);
+            const innerSphereMaterial = new THREE.MeshBasicMaterial({
+                color: 0x28B1DC,
+                wireframe: true,
+                transparent: true,
+                opacity: 0.25
+            });
+            
+            const innerSphere = new THREE.Mesh(innerSphereGeometry, innerSphereMaterial);
+            scene.add(innerSphere);
+            
+            // Add data rings
+            const ring1Geometry = new THREE.RingGeometry(80, 82, 64);
+            const ring1Material = new THREE.MeshBasicMaterial({
+                color: 0x20FE6B,
+                side: THREE.DoubleSide,
+                transparent: true,
+                opacity: 0.2
+            });
+            const ring1 = new THREE.Mesh(ring1Geometry, ring1Material);
+            ring1.rotation.x = Math.PI / 2;
+            scene.add(ring1);
+            
+            const ring2Geometry = new THREE.RingGeometry(90, 91, 64);
+            const ring2Material = new THREE.MeshBasicMaterial({
+                color: 0x28B1DC,
+                side: THREE.DoubleSide,
+                transparent: true,
+                opacity: 0.15
+            });
+            const ring2 = new THREE.Mesh(ring2Geometry, ring2Material);
+            ring2.rotation.x = Math.PI / 4;
+            scene.add(ring2);
             
             // Add particles to the sphere
             const particlesGeometry = new THREE.BufferGeometry();
-            const particlesCount = 500;
+            const particlesCount = 1500;
             
             const posArray = new Float32Array(particlesCount * 3);
+            const scaleArray = new Float32Array(particlesCount);
             
-            for(let i = 0; i < particlesCount * 3; i++) {
-                posArray[i] = (Math.random() - 0.5) * 100;
+            for(let i = 0; i < particlesCount * 3; i += 3) {
+                // Create particles in sphere shape
+                const radius = 60 + (Math.random() * 40);
+                const theta = Math.random() * Math.PI * 2;
+                const phi = Math.random() * Math.PI;
+                
+                posArray[i] = radius * Math.sin(phi) * Math.cos(theta);
+                posArray[i+1] = radius * Math.sin(phi) * Math.sin(theta);
+                posArray[i+2] = radius * Math.cos(phi);
+                
+                scaleArray[i/3] = Math.random();
             }
             
             particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            particlesGeometry.setAttribute('scale', new THREE.BufferAttribute(scaleArray, 1));
             
             const particlesMaterial = new THREE.PointsMaterial({
                 size: 0.5,
-                color: 0x28B1DC,
+                color: 0xffffff,
                 transparent: true,
-                opacity: 0.8
+                opacity: 0.7,
+                vertexColors: false,
             });
             
             const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
             scene.add(particlesMesh);
             
-            camera.position.z = 100;
+            // Create floating data cards
+            const createFloatingCard = (x, y, z, color) => {
+                const cardGroup = new THREE.Group();
+                
+                // Card background
+                const cardGeometry = new THREE.PlaneGeometry(15, 8);
+                const cardMaterial = new THREE.MeshBasicMaterial({
+                    color: color,
+                    transparent: true,
+                    opacity: 0.2,
+                    side: THREE.DoubleSide
+                });
+                
+                const card = new THREE.Mesh(cardGeometry, cardMaterial);
+                
+                // Card border
+                const borderGeometry = new THREE.EdgesGeometry(cardGeometry);
+                const borderMaterial = new THREE.LineBasicMaterial({
+                    color: color,
+                    transparent: true,
+                    opacity: 0.7
+                });
+                
+                const border = new THREE.LineSegments(borderGeometry, borderMaterial);
+                border.position.z = 0.1;
+                
+                // Card lines (data)
+                const line1Geometry = new THREE.PlaneGeometry(10, 0.5);
+                const line1Material = new THREE.MeshBasicMaterial({
+                    color: 0xffffff,
+                    transparent: true,
+                    opacity: 0.5
+                });
+                
+                const line1 = new THREE.Mesh(line1Geometry, line1Material);
+                line1.position.set(0, 2, 0.2);
+                
+                const line2Geometry = new THREE.PlaneGeometry(8, 0.5);
+                const line2 = new THREE.Mesh(line2Geometry, line1Material);
+                line2.position.set(0, 0, 0.2);
+                
+                const line3Geometry = new THREE.PlaneGeometry(12, 0.5);
+                const line3 = new THREE.Mesh(line3Geometry, line1Material);
+                line3.position.set(0, -2, 0.2);
+                
+                cardGroup.add(card);
+                cardGroup.add(border);
+                cardGroup.add(line1);
+                cardGroup.add(line2);
+                cardGroup.add(line3);
+                
+                cardGroup.position.set(x, y, z);
+                
+                return cardGroup;
+            };
+            
+            const card1 = createFloatingCard(70, 10, 30, 0x20FE6B);
+            const card2 = createFloatingCard(-60, -30, 40, 0x28B1DC);
+            const card3 = createFloatingCard(20, 60, -40, 0x8B5CF6);
+            
+            scene.add(card1);
+            scene.add(card2);
+            scene.add(card3);
+            
+            camera.position.z = 150;
+            
+            // Create orbit paths for floating cards
+            const card1Orbit = { theta: 0 };
+            const card2Orbit = { theta: Math.PI * 0.5 };
+            const card3Orbit = { theta: Math.PI };
             
             // Animation function
             function animate() {
                 requestAnimationFrame(animate);
                 
+                // Rotate spheres at different speeds
                 sphere.rotation.x += 0.001;
                 sphere.rotation.y += 0.002;
                 
+                innerSphere.rotation.x -= 0.002;
+                innerSphere.rotation.y -= 0.001;
+                innerSphere.rotation.z += 0.001;
+                
+                // Rotate rings
+                ring1.rotation.z += 0.002;
+                ring2.rotation.z -= 0.001;
+                
+                // Rotate particle mesh
                 particlesMesh.rotation.x += 0.0005;
                 particlesMesh.rotation.y += 0.001;
+                
+                // Move cards in orbital paths
+                card1Orbit.theta += 0.005;
+                card1.position.x = 70 * Math.cos(card1Orbit.theta);
+                card1.position.z = 70 * Math.sin(card1Orbit.theta);
+                card1.rotation.y = -card1Orbit.theta + Math.PI/2;
+                
+                card2Orbit.theta += 0.003;
+                card2.position.x = 60 * Math.cos(card2Orbit.theta);
+                card2.position.z = 60 * Math.sin(card2Orbit.theta);
+                card2.rotation.y = -card2Orbit.theta + Math.PI/2;
+                
+                card3Orbit.theta += 0.007;
+                card3.position.x = 50 * Math.cos(card3Orbit.theta);
+                card3.position.z = 50 * Math.sin(card3Orbit.theta);
+                card3.rotation.y = -card3Orbit.theta + Math.PI/2;
+                
+                // Pulse effect for particles
+                const positions = particlesMesh.geometry.attributes.position.array;
+                const scales = particlesMesh.geometry.attributes.scale.array;
+                
+                for(let i = 0; i < particlesCount; i++) {
+                    const i3 = i * 3;
+                    // Calculate distance from center
+                    const x = positions[i3];
+                    const y = positions[i3+1];
+                    const z = positions[i3+2];
+                    
+                    // Subtly move particles
+                    positions[i3] += Math.sin(Date.now() * 0.001 + i) * 0.03;
+                    positions[i3+1] += Math.cos(Date.now() * 0.001 + i) * 0.03;
+                    positions[i3+2] += Math.sin(Date.now() * 0.001 + i) * 0.03;
+                    
+                    // Pulsing size effect
+                    scales[i] = Math.abs(Math.sin(Date.now() * 0.001 + i)) + 0.5;
+                }
+                
+                particlesMesh.geometry.attributes.position.needsUpdate = true;
+                particlesMesh.geometry.attributes.scale.needsUpdate = true;
                 
                 renderer.render(scene, camera);
             }
             
             animate();
+            
+            // Add resize handler
+            window.addEventListener('resize', () => {
+                // Maintain sphere aspect ratio
+                renderer.setSize(500, 500);
+            });
+            
+            // Add mouse interaction
+            let mouseX = 0;
+            let mouseY = 0;
+            let targetX = 0;
+            let targetY = 0;
+            
+            window.addEventListener('mousemove', (event) => {
+                // Calculate normalized mouse position (-1 to 1)
+                mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+                mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+            });
+            
+            // Update sphere rotation based on mouse position
+            function updateSphereRotation() {
+                targetX += (mouseX * 0.1 - targetX) * 0.05;
+                targetY += (mouseY * 0.1 - targetY) * 0.05;
+                
+                sphere.rotation.y = targetX;
+                sphere.rotation.x = targetY;
+                innerSphere.rotation.y = -targetX * 0.5;
+                innerSphere.rotation.x = -targetY * 0.5;
+                
+                requestAnimationFrame(updateSphereRotation);
+            }
+            
+            updateSphereRotation();
 
             // Custom cursor
             const cursor = document.querySelector('.cursor-follower');
