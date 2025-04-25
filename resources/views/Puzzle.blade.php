@@ -17,13 +17,22 @@
     <!-- GSAP for advanced animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/MotionPathPlugin.min.js"></script>
     <!-- Locomotive Scroll for smooth scrolling -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <!-- Lottie Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.11.0/lottie.min.js"></script>
+    <!-- Three.js for 3D effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Particles.js for background effects -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 
 <body data-scroll-container>
     <div class="noise-overlay"></div>
+    <div id="particles-js" class="particles-container"></div>
+    <div class="cursor-follower"></div>
     
     <header class="header" data-scroll-section>
         <div class="container">
@@ -31,11 +40,8 @@
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">
                         <div class="logo-wrapper">
-                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18 36C27.9411 36 36 27.9411 36 18C36 8.05887 27.9411 0 18 0C8.05887 0 0 8.05887 0 18C0 27.9411 8.05887 36 18 36Z" fill="#20FE6B"/>
-                                <path d="M11 11H25V25H11V11Z" fill="#040308"/>
-                            </svg>
-                            <span>Puzzle</span>
+                            <div class="logo-animation" id="logoAnimation"></div>
+                            <span class="glitch-text" data-text="Puzzle">Puzzle</span>
                         </div>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -45,24 +51,37 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Home</a>
+                                <a class="nav-link active magnetic-element" href="#">
+                                    <span class="magnetic-content">Home</span>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Products</a>
+                                <a class="nav-link magnetic-element" href="#">
+                                    <span class="magnetic-content">Products</span>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
+                                <a class="nav-link magnetic-element" href="#">
+                                    <span class="magnetic-content">About</span>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Resources</a>
+                                <a class="nav-link magnetic-element" href="#">
+                                    <span class="magnetic-content">Resources</span>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Pricing</a>
+                                <a class="nav-link magnetic-element" href="#">
+                                    <span class="magnetic-content">Pricing</span>
+                                </a>
                             </li>
                         </ul>
                         <div class="d-flex">
-                            <button class="btn btn-ghost me-2">Log in</button>
-                            <button class="btn btn-primary">Get started</button>
+                            <button class="btn btn-ghost me-2 btn-3d">Log in</button>
+                            <button class="btn btn-primary btn-3d">
+                                <span class="btn-text">Get started</span>
+                                <span class="btn-particles"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -72,32 +91,65 @@
 
     <main>
         <section class="hero-section" data-scroll-section>
+            <div class="digital-grid">
+                <div class="grid-line horizontal"></div>
+                <div class="grid-line horizontal"></div>
+                <div class="grid-line horizontal"></div>
+                <div class="grid-line vertical"></div>
+                <div class="grid-line vertical"></div>
+                <div class="grid-line vertical"></div>
+            </div>
+            <div class="glowing-orbs">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+            </div>
+            
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <h1 class="hero-title" data-scroll data-scroll-speed="1">
-                            <span class="reveal-text">AI-powered</span>
-                            <span class="reveal-text delay-1">accounting & tax</span>
-                            <span class="reveal-text delay-2">management</span>
+                            <span class="reveal-text cyberpunk-text">AI-powered</span>
+                            <span class="reveal-text delay-1 cyberpunk-text">accounting & tax</span>
+                            <span class="reveal-text delay-2 cyberpunk-text">management</span>
                         </h1>
-                        <p class="hero-description" data-scroll data-scroll-speed="0.5">
+                        <div class="cyberpunk-line"></div>
+                        <p class="hero-description digital-text" data-scroll data-scroll-speed="0.5">
                             Streamline your financial operations with our intelligent platform. Designed for businesses and individuals seeking efficiency and accuracy.
                         </p>
                         <div class="hero-cta" data-scroll data-scroll-speed="0.7">
-                            <button class="btn btn-primary me-3">Request a demo</button>
-                            <button class="btn btn-outline">Learn more</button>
+                            <button class="btn btn-primary me-3 btn-glow">
+                                <span class="btn-text">Request a demo</span>
+                                <div class="btn-glow-lines">
+                                    <div class="glow-line"></div>
+                                    <div class="glow-line"></div>
+                                </div>
+                            </button>
+                            <button class="btn btn-outline btn-hologram">
+                                <span class="hologram-text">Learn more</span>
+                                <div class="hologram-grid"></div>
+                            </button>
                         </div>
                         <div class="metrics-row" data-scroll data-scroll-speed="0.5">
-                            <div class="metric">
-                                <span class="metric-value">99%</span>
+                            <div class="metric cyberpunk-card">
+                                <div class="metric-icon">
+                                    <div id="accuracyAnimation" class="mini-lottie"></div>
+                                </div>
+                                <span class="metric-value counter-anim" data-count="99">0</span><span class="percent">%</span>
                                 <span class="metric-label">Accuracy</span>
                             </div>
-                            <div class="metric">
-                                <span class="metric-value">$2.4M</span>
+                            <div class="metric cyberpunk-card">
+                                <div class="metric-icon">
+                                    <div id="savingsAnimation" class="mini-lottie"></div>
+                                </div>
+                                <span class="currency">$</span><span class="metric-value counter-anim" data-count="2.4">0</span><span class="million">M</span>
                                 <span class="metric-label">Client savings</span>
                             </div>
-                            <div class="metric">
-                                <span class="metric-value">4,500+</span>
+                            <div class="metric cyberpunk-card">
+                                <div class="metric-icon">
+                                    <div id="usersAnimation" class="mini-lottie"></div>
+                                </div>
+                                <span class="metric-value counter-anim" data-count="4500">0</span><span class="plus">+</span>
                                 <span class="metric-label">Active users</span>
                             </div>
                         </div>
@@ -105,31 +157,47 @@
                     <div class="col-lg-6">
                         <div class="hero-image" data-scroll data-scroll-speed="1.5">
                             <div class="floating-elements">
-                                <div class="floating-card card-1">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#20FE6B"/>
-                                    </svg>
-                                    <span>Transaction processed</span>
+                                <div class="hero-lottie-container">
+                                    <div id="mainHeroAnimation" class="lottie-animation"></div>
                                 </div>
-                                <div class="floating-card card-2">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#28B1DC"/>
-                                    </svg>
-                                    <span>Tax optimization</span>
-                                </div>
-                                <div class="platform-illustration">
-                                    <div class="dashboard-mockup">
-                                        <div class="mockup-header"></div>
-                                        <div class="mockup-content">
-                                            <div class="chart-element"></div>
-                                            <div class="data-rows">
-                                                <div class="data-row"></div>
-                                                <div class="data-row"></div>
-                                                <div class="data-row"></div>
+                                
+                                <div class="notification-cards">
+                                    <div class="floating-card card-1 glass-card">
+                                        <div class="card-icon pulse-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#20FE6B"/>
+                                            </svg>
+                                        </div>
+                                        <div class="card-content">
+                                            <span class="card-label">Transaction processed</span>
+                                            <div class="progress-bar-container">
+                                                <div class="progress-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="floating-card card-2 glass-card">
+                                        <div class="card-icon pulse-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#28B1DC"/>
+                                            </svg>
+                                        </div>
+                                        <div class="card-content">
+                                            <span class="card-label">Tax optimization</span>
+                                            <div class="progress-bar-container">
+                                                <div class="progress-bar blue-bar"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="data-points-container">
+                                    <div class="data-point" style="top: 20%; left: 10%"></div>
+                                    <div class="data-point" style="top: 30%; left: 80%"></div>
+                                    <div class="data-point" style="top: 50%; left: 30%"></div>
+                                    <div class="data-point" style="top: 70%; left: 60%"></div>
+                                    <div class="data-point" style="top: 80%; left: 20%"></div>
+                                </div>
+                                <div class="digital-sphere" id="digitalSphere"></div>
                             </div>
                         </div>
                     </div>
@@ -418,6 +486,298 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Initialize particles.js
+            particlesJS('particles-js', {
+                particles: {
+                    number: {
+                        value: 80,
+                        density: {
+                            enable: true,
+                            value_area: 800
+                        }
+                    },
+                    color: {
+                        value: ["#20FE6B", "#28B1DC", "#8B5CF6"]
+                    },
+                    shape: {
+                        type: "circle",
+                        stroke: {
+                            width: 0,
+                            color: "#000000"
+                        },
+                    },
+                    opacity: {
+                        value: 0.2,
+                        random: true,
+                        anim: {
+                            enable: true,
+                            speed: 1,
+                            opacity_min: 0.05,
+                            sync: false
+                        }
+                    },
+                    size: {
+                        value: 3,
+                        random: true,
+                        anim: {
+                            enable: true,
+                            speed: 2,
+                            size_min: 0.5,
+                            sync: false
+                        }
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: "#20FE6B",
+                        opacity: 0.1,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 1,
+                        direction: "none",
+                        random: true,
+                        straight: false,
+                        out_mode: "out",
+                        bounce: false,
+                    }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: {
+                            enable: true,
+                            mode: "grab"
+                        },
+                        onclick: {
+                            enable: true,
+                            mode: "push"
+                        },
+                        resize: true
+                    },
+                    modes: {
+                        grab: {
+                            distance: 140,
+                            line_linked: {
+                                opacity: 0.4
+                            }
+                        },
+                        push: {
+                            particles_nb: 4
+                        }
+                    }
+                },
+                retina_detect: true
+            });
+
+            // Initialize Lottie animations
+            const logoAnimation = lottie.loadAnimation({
+                container: document.getElementById('logoAnimation'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'https://assets3.lottiefiles.com/packages/lf20_sz683pfs.json' // Logo animation
+            });
+
+            const mainHeroAnimation = lottie.loadAnimation({
+                container: document.getElementById('mainHeroAnimation'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'https://assets5.lottiefiles.com/packages/lf20_dzn7h5et.json' // Analytics Dashboard
+            });
+
+            const accuracyAnimation = lottie.loadAnimation({
+                container: document.getElementById('accuracyAnimation'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'https://assets9.lottiefiles.com/packages/lf20_xjkbiaev.json' // Accuracy icon
+            });
+
+            const savingsAnimation = lottie.loadAnimation({
+                container: document.getElementById('savingsAnimation'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'https://assets6.lottiefiles.com/packages/lf20_BhbCTg.json' // Money/savings icon
+            });
+
+            const usersAnimation = lottie.loadAnimation({
+                container: document.getElementById('usersAnimation'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'https://assets2.lottiefiles.com/packages/lf20_4l03ffov.json' // User icon
+            });
+
+            // Initialize Three.js for digital sphere
+            const container = document.getElementById('digitalSphere');
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+            
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            renderer.setSize(300, 300);
+            container.appendChild(renderer.domElement);
+            
+            // Create sphere geometry
+            const geometry = new THREE.SphereGeometry(50, 32, 32);
+            const material = new THREE.MeshBasicMaterial({
+                color: 0x20FE6B,
+                wireframe: true,
+                transparent: true,
+                opacity: 0.3
+            });
+            
+            const sphere = new THREE.Mesh(geometry, material);
+            scene.add(sphere);
+            
+            // Add particles to the sphere
+            const particlesGeometry = new THREE.BufferGeometry();
+            const particlesCount = 500;
+            
+            const posArray = new Float32Array(particlesCount * 3);
+            
+            for(let i = 0; i < particlesCount * 3; i++) {
+                posArray[i] = (Math.random() - 0.5) * 100;
+            }
+            
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            
+            const particlesMaterial = new THREE.PointsMaterial({
+                size: 0.5,
+                color: 0x28B1DC,
+                transparent: true,
+                opacity: 0.8
+            });
+            
+            const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+            scene.add(particlesMesh);
+            
+            camera.position.z = 100;
+            
+            // Animation function
+            function animate() {
+                requestAnimationFrame(animate);
+                
+                sphere.rotation.x += 0.001;
+                sphere.rotation.y += 0.002;
+                
+                particlesMesh.rotation.x += 0.0005;
+                particlesMesh.rotation.y += 0.001;
+                
+                renderer.render(scene, camera);
+            }
+            
+            animate();
+
+            // Custom cursor
+            const cursor = document.querySelector('.cursor-follower');
+            
+            document.addEventListener('mousemove', e => {
+                gsap.to(cursor, {
+                    x: e.clientX,
+                    y: e.clientY,
+                    duration: 0.1
+                });
+            });
+            
+            document.addEventListener('mousedown', () => {
+                gsap.to(cursor, {
+                    scale: 0.7,
+                    duration: 0.2
+                });
+            });
+            
+            document.addEventListener('mouseup', () => {
+                gsap.to(cursor, {
+                    scale: 1,
+                    duration: 0.2
+                });
+            });
+            
+            // Navbar animation on scroll
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('.header');
+                const navbar = document.querySelector('.navbar');
+                const scrollPosition = window.scrollY;
+                
+                if (scrollPosition > 100) {
+                    header.classList.add('header-scrolled');
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    header.classList.remove('header-scrolled');
+                    navbar.classList.remove('navbar-scrolled');
+                }
+                
+                // Adjust navbar opacity and blur based on scroll position
+                const opacity = Math.min(0.15 + (scrollPosition / 1000), 0.5);
+                const blur = Math.min(12 + (scrollPosition / 100), 20);
+                navbar.style.backgroundColor = `rgba(15, 23, 42, ${opacity})`;
+                navbar.style.backdropFilter = `blur(${blur}px)`;
+                navbar.style.webkitBackdropFilter = `blur(${blur}px)`;
+            });
+
+            // Magnetic elements
+            const magneticElements = document.querySelectorAll('.magnetic-element');
+            
+            magneticElements.forEach(element => {
+                const content = element.querySelector('.magnetic-content');
+                
+                element.addEventListener('mousemove', e => {
+                    const rect = element.getBoundingClientRect();
+                    const x = e.clientX - rect.left - rect.width / 2;
+                    const y = e.clientY - rect.top - rect.height / 2;
+                    
+                    gsap.to(content, {
+                        x: x * 0.2,
+                        y: y * 0.2,
+                        duration: 0.3
+                    });
+                });
+                
+                element.addEventListener('mouseleave', () => {
+                    gsap.to(content, {
+                        x: 0,
+                        y: 0,
+                        duration: 0.5
+                    });
+                });
+            });
+
+            // Button particle effects
+            document.querySelectorAll('.btn-primary').forEach(button => {
+                button.addEventListener('mousemove', e => {
+                    const rect = button.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    button.style.setProperty('--x', x + 'px');
+                    button.style.setProperty('--y', y + 'px');
+                });
+            });
+
+            // Counter animation
+            function animateCounters() {
+                document.querySelectorAll('.counter-anim').forEach(counter => {
+                    const target = parseFloat(counter.getAttribute('data-count'));
+                    const duration = 2000;
+                    const step = 30;
+                    let current = 0;
+                    const increment = target / (duration / step);
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if(current >= target) {
+                            clearInterval(timer);
+                            counter.textContent = target;
+                        } else {
+                            counter.textContent = Math.round(current * 100) / 100;
+                        }
+                    }, step);
+                });
+            }
+
             // Initialize Locomotive Scroll
             const scroll = new LocomotiveScroll({
                 el: document.querySelector('[data-scroll-container]'),
@@ -432,7 +792,7 @@
             });
 
             // GSAP animations
-            gsap.registerPlugin(ScrollTrigger);
+            gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
             
             // Update ScrollTrigger when locomotive scroll updates
             scroll.on('scroll', ScrollTrigger.update);
@@ -456,6 +816,13 @@
                 ease: "power3.out"
             });
 
+            gsap.from('.cyberpunk-line', {
+                width: 0,
+                duration: 1,
+                delay: 0.8,
+                ease: "power1.out"
+            });
+
             gsap.from('.hero-description', {
                 opacity: 0,
                 duration: 1,
@@ -471,6 +838,18 @@
                 ease: "power2.out"
             });
 
+            // Animate metrics
+            gsap.from('.metric', {
+                y: 30,
+                opacity: 0,
+                duration: 1,
+                stagger: 0.2,
+                delay: 1,
+                ease: "power2.out",
+                onComplete: animateCounters
+            });
+
+            // Floating cards animation
             gsap.from('.floating-card', {
                 y: 30,
                 opacity: 0,
@@ -480,22 +859,46 @@
                 ease: "power2.out"
             });
 
-            // Subtle floating animation for cards
-            gsap.to('.floating-card.card-1', {
-                y: -15,
-                duration: 2,
-                repeat: -1,
-                yoyo: true,
-                ease: "sine.inOut"
+            // Animate data points
+            gsap.from('.data-point', {
+                scale: 0,
+                opacity: 0,
+                duration: 0.5,
+                stagger: 0.1,
+                delay: 1.2,
+                ease: "back.out"
             });
 
-            gsap.to('.floating-card.card-2', {
-                y: -15,
-                duration: 2.5,
+            // Subtle floating animation for cards with random movement
+            document.querySelectorAll('.floating-card').forEach(card => {
+                gsap.to(card, {
+                    y: 'random(-15, -25)',
+                    x: 'random(-5, 5)',
+                    rotation: 'random(-2, 2)',
+                    duration: 'random(2, 4)',
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "sine.inOut"
+                });
+            });
+
+            // Grid lines animation
+            gsap.from('.grid-line', {
+                opacity: 0,
+                duration: 2,
+                stagger: 0.1,
+                ease: "power1.out"
+            });
+
+            // Glowing orbs pulsing
+            gsap.to('.orb', {
+                opacity: 'random(0.05, 0.15)',
+                scale: 'random(0.8, 1.2)',
+                duration: 'random(3, 6)',
                 repeat: -1,
                 yoyo: true,
-                delay: 0.3,
-                ease: "sine.inOut"
+                ease: "sine.inOut",
+                stagger: 0.5
             });
 
             // Section animations
@@ -543,6 +946,8 @@
                 }
             });
 
+            // No neon matrix animations
+            
             // After all animations are set up
             ScrollTrigger.addEventListener('refresh', () => scroll.update());
             ScrollTrigger.refresh();
